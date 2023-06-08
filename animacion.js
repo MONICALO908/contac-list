@@ -114,7 +114,7 @@ function ejercicioUno(a, b, operation){
   ejercicioUno(30, 35, "division");
   */
   
-
+/*
   let listaContactos = [
    "henry pinzon",
    "fabio ortiz",
@@ -143,3 +143,61 @@ function ejercicioUno(a, b, operation){
   eliminar();
 
   console.log(listaContactos);
+
+*/
+
+
+
+  
+
+let datosPersonales=[
+   {id: 1016017398,
+   nombres:'Alberto Jose', 
+   apellidos:'Sanchez Ortiz',
+   telefonos: 323678900,
+   ubicaciones:[{
+      ciudad: 'Bogota',
+      direccion: 'calle 9 # 6-96',
+   }
+
+   ]
+},
+   
+];
+ console.log(datosPersonales); 
+
+
+ function create(id, nombre,apellidos, tel, ciudad,direccion) {
+   datosPersonales.push({
+      id:id, nombres:nombre , apellidos: apellidos , telelefonos: tel ,ubicaciones: [{ciudad:ciudad,direccion}]
+    });
+   
+   
+ }
+
+ create("123456","andrea","ruiz", "3216789089","bogota","calle 5");
+ create("1123432", "sandra","paez","3134567890","bogota","calle 5");
+
+
+ console.log(datosPersonales);
+
+
+
+ function borrarContacto(nombres){
+   for (var i = 0; i<datosPersonales.length; i++) {
+      if (datosPersonales[i].nombres===nombres){
+         datosPersonales.splice(i,1);
+      }
+   }
+   console.log(datosPersonales);
+
+ }
+
+borrarContacto("sandra");
+
+
+
+
+
+
+ 
