@@ -162,9 +162,10 @@ let datosPersonales=[
 
    ]
 },
-   
+  
 ];
- console.log(datosPersonales); 
+/*
+console.log(datosPersonales); 
 
 
  function create(id, nombre,apellidos, tel, ciudad,direccion) {
@@ -191,13 +192,29 @@ let datosPersonales=[
    }
    console.log(datosPersonales);
 
+
+
  }
 
-borrarContacto("sandra");
+borrarContacto("andrea");
+
+
+*/
+
+function update(id, value, property){
+   for (var i = 0; i<datosPersonales.length; i++) {
+      if (datosPersonales[i].id===id){
+         datosPersonales[i][property] = value
+      }
+   }
+   console.log(datosPersonales);
+
+}
 
 
 
 
 
+update(1016017398,361247476157, "telefonos")
 
  
